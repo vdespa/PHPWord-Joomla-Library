@@ -8,16 +8,16 @@ If you already know PHPWord, than this is a library package to be used in Joomla
 Version
 -------
 
-* The current Joomla! Library is using PHPWord 0.6.2-1 Beta, 
+* The current Joomla! Library is using PHPWord 0.6.2-1 Beta
 * PHPWord Joomla! Library version: 1.0.0
 
 Usage
 -----
 
-`jimport('phpword.library.phpword');`
-`// New Word Document`
-`$PHPWord = new PHPWord();`
-`// how you can have fun...`
+`jimport('phpword.library.phpword');  `
+`// New Word Document  `
+`$PHPWord = new PHPWord();  `
+`// how you can have fun...  `
 
 Documentation
 -------------
