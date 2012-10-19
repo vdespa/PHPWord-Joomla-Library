@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="2.5.0">
+    <name>PHPWord Library for Joomla!</name>
+    <!-- This element is the "system name" for the library -->
+    <libraryname>phpword</libraryname>
+    <author>Valentin Despa</author>
+    <creationDate>19.10.2012</creationDate>
+    <copyright>Copyright (c) 010 PHPWord</copyright>
+    <license>
+    LGPL http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    
+    </license>
+    <authorEmail>info@vdespa.de</authorEmail>
+    <authorUrl>www.vdespa.de</authorUrl>
+    <version>PHPWord 0.6.2-1 Beta</version>
+    <description> 
+    PHPWord is a library written in PHP that create word documents. 
+    </description>
+    <!-- Anything included in the <files> element will be copied into the library's folder.  -->
+    <files>
+        <folder>library</folder>
+    </files>
+</extension>
