@@ -15,8 +15,11 @@ Usage
 -----
 
 `jimport('phpword.library.phpword');  `
+
 `// New Word Document  `
+
 `$PHPWord = new PHPWord();  `
+
 `// how you can have fun...  `
 
 Documentation
