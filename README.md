@@ -20,7 +20,7 @@ Usage
 
 `$PHPWord = new PHPWord();  `
 
-`// how you can have fun...  `
+`// now you can have fun...  `
 
 Documentation
 -------------
