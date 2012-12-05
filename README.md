@@ -18,22 +18,22 @@ Usage
 
 `// New Word Document  `
 
-`$PHPWord = new PHPWord();  `
+`$phpword = new PHPWord();  `
 
-`// now you can have fun...  `
+`// now you can use PHPWord as usual...  `
 
 Documentation
 -------------
 
 * [PHPWord Codeplex page] (http://phpword.codeplex.com/)
-* [PHPWord github page] (https://github.com/PHPOffice/PHPExcel/)
+* [PHPWord github page] (https://github.com/PHPOffice/PHPWord/)
 
-Bugs? Problems?
----------------
+Bugs? Problems? Feedback?
+-------------------------
 
 If you have any problems installing / updating PHPWord Library in Joomla! feel free to [Add a New issue] (https://github.com/vdespa/PHPWord-Joomla/issues)
 
-If you are having problems with PHPExcel itself and you think is a bug or something, check the [PHPExcel Issue Tracker] (https://github.com/PHPOffice/PHPWord/issues)
+If you are having problems with PHPExcel itself and you think is a bug or something, check the [PHPWord Issue Tracker] (https://github.com/PHPOffice/PHPWord/issues)
 
 Credits
 -------
