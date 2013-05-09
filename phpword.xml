@@ -2,7 +2,7 @@
 <extension type="library" method="upgrade" version="2.5.0">
 	<name>PHPWord Library for Joomla!</name>
 	<!-- This element is the "system name" for the library -->
-	<libraryname>PHPWord 0.6.3</libraryname>
+	<libraryname>phpword</libraryname>
 	<author>Valentin Despa</author>
 	<authorEmail>info@vdespa.de</authorEmail>
 	<authorUrl>www.vdespa.de</authorUrl>
