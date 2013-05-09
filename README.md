@@ -1,7 +1,7 @@
 PHPWord Joomla! Library
 =======================
 
-PHPWord Library for Joomla! 2.5. &amp; 3.0. 
+PHPWord Library for Joomla! 2.5. &amp; 3.1. 
 
 If you already know PHPWord, than this is a library package to be used in Joomla!
 
