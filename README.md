@@ -9,14 +9,20 @@ Version
 -------
 
 * The current Joomla! Library is using PHPWord 0.6.2-1 Beta
-* PHPWord Joomla! Library version: 1.0.0
 
 Usage
 -----
 
-`jimport('phpword.library.phpword');  `
+Download
+-------
 
-`// New Word Document  `
+[Download PHPWord Joomla! Library 0.6.2-1 Beta](http://)
+
+`jimport('phpword.library.PHPWord');`
+
+Please note the upercases when using jimport!
+
+`// New Word Document`
 
 `$phpword = new PHPWord();  `
 
@@ -44,5 +50,5 @@ Credits
 
 License
 -------
-PHPExcel is licensed under [LGPL (GNU LESSER GENERAL PUBLIC LICENSE)](https://github.com/PHPOffice/PHPExcel/blob/master/license.md)
+PHPWord is licensed under [LGPL (GNU LESSER GENERAL PUBLIC LICENSE)](https://github.com/PHPOffice/PHPExcel/blob/master/license.md)
 
