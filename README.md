@@ -1,14 +1,14 @@
 PHPWord Joomla! Library
 =======================
 
-PHPWord Library for Joomla! 2.5. &amp; 3.1. 
+PHPWord Library for Joomla! 2.5. &amp; 3.x 
 
 If you already know PHPWord, than this is a library package to be used in Joomla!
 
 Version
 -------
 
-* The current Joomla! Library is using PHPWord 0.6.3
+* The current Joomla! Library is using PHPWord 0.13.0 (master) EXPERIMENTAL
 
 Download
 -------
@@ -18,13 +18,13 @@ Download
 Usage
 -----
 
-`jimport('phpword.library.PHPWord');`
+`jimport('phpword.library.autoload');`
 
 Please note the upercases when using jimport!
 
 `// New Word Document`
 
-`$phpword = new PHPWord();  `
+`$phpWord = new \PhpOffice\PhpWord\PhpWord();`
 
 `// now you can use PHPWord as usual...  `
 
