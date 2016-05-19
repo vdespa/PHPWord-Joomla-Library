@@ -4,14 +4,14 @@
 	<!-- This element is the "system name" for the library -->
 	<libraryname>phpword</libraryname>
 	<author>Valentin Despa</author>
-	<authorEmail>info@vdespa.de</authorEmail>
-	<authorUrl>www.vdespa.de</authorUrl>
-	<creationDate>09.05.2013</creationDate>
+	<authorEmail>valentin@vdespa.com</authorEmail>
+	<authorUrl>www.vdespa.com</authorUrl>
+	<creationDate>19.05.2016</creationDate>
 	<copyright>Copyright (c) PHPWord</copyright>
 	<license>
 		LGPL http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
 	</license>
-	<version>0.6.3</version>
+	<version>0.13.0-alpha</version>
 	<description>
 		PHPWord is a library written in PHP that create word documents.
 	</description>

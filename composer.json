@@ -1,0 +1,12 @@
+{
+    "name": "vdespa/phpword",
+    "description": "PHPWord Joomla! Library",
+    "type": "library",
+    "require": {
+        "phpoffice/phpword": "dev-master"
+    },
+    "license": "LGPL version 3",
+    "config": {
+        "vendor-dir": "library"
+    }
+}
