@@ -52,3 +52,9 @@ License
 -------
 PHPWord is licensed under [LGPL (GNU LESSER GENERAL PUBLIC LICENSE)](https://github.com/PHPOffice/PHPExcel/blob/master/license.md)
 
+Note
+----
+
+The library folder was build using the given composer.json file and executing:
+
+    composer update --no-dev --prefer-dist
