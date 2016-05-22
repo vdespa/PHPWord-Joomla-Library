@@ -1,26 +1,66 @@
-CHANGELOG
-=========
+Change Log
+==========
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
 
-This is the changelog between releases of PHPWord. Releases are listed in reverse chronological order with the latest version listed on top, while additions/changes in each release are listed in chronological order. Changes in each release are divided into three parts: added or change features, bugfixes, and miscellaneous improvements. Each line contains short information about the change made, the person who made it, and the related issue number(s) in GitHub.
+0.13.0 (unreleased)
+-------------------
+Place announcement text here.
+
+### Added
+- Introduced the `\PhpOffice\PhpWord\SimpleType\Jc` simple type. - @RomanSyroeshko
+- Introduced the `\PhpOffice\PhpWord\SimpleType\JcTable` simple type. - @RomanSyroeshko
+- Introduced writer for the "Paragraph Alignment" element (see `\PhpOffice\PhpWord\Writer\Word2007\Element\ParagraphAlignment`). - @RomanSyroeshko
+- Introduced writer for the "Table Alignment" element (see `\PhpOffice\PhpWord\Writer\Word2007\Element\TableAlignment`). - @RomanSyroeshko
+- Supported indexed arrays in arguments of `TemplateProcessor::setValue()`. - @RomanSyroeshko #618
+
+### Changed
+- Improved error message for the case when `autoload.php` is not found. - @RomanSyroeshko #371
+- Renamed the `align` option of `NumberingLevel`, `Frame`, `Table`, and `Paragraph` styles into `alignment`. - @RomanSyroeshko
+- Improved performance of `TemplateProcessor::setValue()`. - @kazitanvirahsan #614, #617
+
+### Deprecated
+- `getAlign` and `setAlign` methods of `NumberingLevel`, `Frame`, `Table`, and `Paragraph` styles.
+Use the correspondent `getAlignment` and `setAlignment` methods instead. - @RomanSyroeshko
+- `left`, `right`, and `justify` alignment options for paragraphs (now are mapped to `Jc::START`, `Jc::END`, and `Jc::BOTH`). - @RomanSyroeshko
+- `left`, `right`, and `justify` alignment options for tables (now are mapped to `Jc::START`, `Jc::END`, and `Jc::CENTER`). - @RomanSyroeshko
+
+### Removed
+- `\PhpOffice\PhpWord\Style\Alignment`. Style properties, which previously stored instances of this class, now deal with strings.
+In each case set of available string values is defined by the correspondent simple type. - @RomanSyroeshko
+- Manual installation support. Since the release we have dependencies on third party libraries,
+so installation via ZIP-archive download is not an option anymore. To install PHPWord use [Composer](https://getcomposer.org/).
+ We also removed `\PhpOffice\PhpWord\Autoloader`, because the latter change made it completely useless.
+ Autoloaders provided by Composer are in use now (see `bootstrap.php`). - @RomanSyroeshko
+- `\PhpOffice\PhpWord\Shared\Drawing` replaced by `\PhpOffice\Common\Drawing`. - @Progi1984 #658
+- `\PhpOffice\PhpWord\Shared\Font`. - @Progi1984 #658
+- `\PhpOffice\PhpWord\Shared\String` replaced by `\PhpOffice\Common\Text`. - @Progi1984 @RomanSyroeshko #658
+- `\PhpOffice\PhpWord\Shared\XMLReader` replaced by `\PhpOffice\Common\XMLReader`. - @Progi1984 #658
+- `\PhpOffice\PhpWord\Shared\XMLWriter` replaced by `\PhpOffice\Common\XMLWriter`. - @Progi1984 @RomanSyroeshko #658
+
+### Fixed
+- `Undefined property` error while reading MS-DOC documents. - @jaberu #610
+- Corrupted OOXML template issue in case when its names is broken immediately after `$` sign.
+That case wasn't taken into account in implementation of `TemplateProcessor::fixBrokenMacros()`. - @RomanSyroeshko @d-damien #548
+
+
 
 0.12.1 (30 August 2015)
--------------------
-
-Maintenance release. This release is focused primarily on ``TemplateProcessor``.
+-----------------------
+Maintenance release. This release is focused primarily on `TemplateProcessor`.
 
 ### Changes
-- Changed visibility of all private properties and methods of ``TemplateProcessor`` to ``protected``. - @RomanSyroeshko #498
-- Improved performance of ``TemplateProcessor::setValue()``. - @RomanSyroeshko @nicoSWD #513
+- Changed visibility of all private properties and methods of `TemplateProcessor` to `protected`. - @RomanSyroeshko #498
+- Improved performance of `TemplateProcessor::setValue()`. - @RomanSyroeshko @nicoSWD #513
 
 ### Bugfixes
-- Fixed issue with "Access denied" message while opening ``Sample_07_TemplateCloneRow.docx`` and ``Sample_23_TemplateBlock.docx`` result files on Windows platform. - @RomanSyroeshko @AshSat #532
-- Fixed ``PreserveText`` element alignment in footer (see ``Sample_12_HeaderFooter.php``). - @RomanSyroeshko @SSchwaiger #495
+- Fixed issue with "Access denied" message while opening `Sample_07_TemplateCloneRow.docx` and `Sample_23_TemplateBlock.docx` result files on Windows platform. - @RomanSyroeshko @AshSat #532
+- Fixed `PreserveText` element alignment in footer (see `Sample_12_HeaderFooter.php`). - @RomanSyroeshko @SSchwaiger #495
 
 
 
 0.12.0 (3 January 2015)
 -----------------------
-
 This release added form fields (textinput, checkbox, and dropdown), drawing shapes (arc, curve, line, polyline, rect, oval), and basic 2D chart (pie, doughnut, bar, line, area, scatter, radar) elements along with some new styles. Basic MsDoc reader is introduced.
 
 ### Features
@@ -80,7 +120,6 @@ This release added form fields (textinput, checkbox, and dropdown), drawing shap
 
 0.11.1 (2 June 2014)
 --------------------
-
 This is an immediate bugfix release for HTML reader.
 
 - HTML Reader: `<p>` and header tags puts no output - @canyildiz @ivanlanin #257
@@ -89,7 +128,6 @@ This is an immediate bugfix release for HTML reader.
 
 0.11.0 (1 June 2014)
 --------------------
-
 This release marked the change of PHPWord license from LGPL 2.1 to LGPL 3. Four new elements were added: TextBox, ListItemRun, Field, and Line. Relative and absolute positioning for images and textboxes were added. Writer classes were refactored into parts, elements, and styles. ODT and RTF features were enhanced. Ability to add elements to PHPWord object via HTML were implemented. RTF and HTML reader were initiated.
 
 ### Features
@@ -154,7 +192,6 @@ This release marked the change of PHPWord license from LGPL 2.1 to LGPL 3. Four 
 
 0.10.1 (21 May 2014)
 --------------------
-
 This is a bugfix release for `php-zip` requirement in Composer.
 
 - Change Composer requirements for php-zip from `require` to `suggest` - @bskrtich #246
@@ -163,7 +200,6 @@ This is a bugfix release for `php-zip` requirement in Composer.
 
 0.10.0 (4 May 2014)
 -------------------
-
 This release marked heavy refactorings on internal code structure with the creation of some abstract classes to reduce code duplication. `Element` subnamespace is introduced in this release to replace `Section`. Word2007 reader capability is greatly enhanced. Endnote is introduced. List numbering is now customizable. Basic HTML and PDF writing support is enabled. Basic ODText reader is introduced.
 
 ### Features
@@ -248,7 +284,6 @@ This release marked heavy refactorings on internal code structure with the creat
 
 0.9.1 (27 Mar 2014)
 -------------------
-
 This is a bugfix release for PSR-4 compatibility.
 
 - Fixed PSR-4 composer autoloader - @AntonTyutin
@@ -257,7 +292,6 @@ This is a bugfix release for PSR-4 compatibility.
 
 0.9.0 (26 Mar 2014)
 -------------------
-
 This release marked the transformation to namespaces (PHP 5.3+).
 
 ### Features
@@ -280,7 +314,6 @@ This release marked the transformation to namespaces (PHP 5.3+).
 
 0.8.1 (17 Mar 2014)
 -------------------
-
 This is a bugfix release for image detection functionality.
 
 - Added fallback for computers that do not have exif_imagetype - @bskrtich, @gabrielbull
@@ -289,7 +322,6 @@ This is a bugfix release for image detection functionality.
 
 0.8.0 (15 Mar 2014)
 -------------------
-
 This release merged a lot of improvements from the community. Unit tests introduced in this release and has reached 90% code coverage.
 
 ### Features
@@ -338,7 +370,6 @@ This release merged a lot of improvements from the community. Unit tests introdu
 
 0.7.0 (28 Jan 2014)
 -------------------
-
 This is the first release after a long development hiatus in [CodePlex](https://phpword.codeplex.com/). This release initialized ODT and RTF Writer, along with some other new features for the existing Word2007 Writer, e.g. tab, multiple header, rowspan and colspan. [Composer](https://packagist.org/packages/phpoffice/phpword) and [Travis](https://travis-ci.org/PHPOffice/PHPWord) were added.
 
 ### Features
