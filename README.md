@@ -1,4 +1,4 @@
-PHPWord Joomla! Library
+PHPWord Joomla! Library ![](https://img.shields.io/badge/maintained%3F-no!-red.svg?style=flat)
 =======================
 
 PHPWord Library for Joomla! 2.5. &amp; 3.x 
