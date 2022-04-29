@@ -10,8 +10,8 @@
  * file that was distributed with this source code. For the full list of
  * contributors, visit https://github.com/PHPOffice/PHPWord/contributors.
  *
- * @link        https://github.com/PHPOffice/PHPWord
- * @copyright   2010-2016 PHPWord contributors
+ * @see         https://github.com/PHPOffice/PHPWord
+ * @copyright   2010-2018 PHPWord contributors
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
@@ -19,31 +19,15 @@ namespace PhpOffice\PhpWord\Escaper;
 
 /**
  * @since 0.13.0
+ *
+ * @codeCoverageIgnore
  */
-class RegExp implements EscaperInterface
+class RegExp extends AbstractEscaper
 {
     const REG_EXP_DELIMITER = '/';
 
-    /**
-     * @param string $subject
-     *
-     * @return string
-     */
-    protected static function escapeSingleItem($subject)
+    protected function escapeSingleValue($input)
     {
-        return self::REG_EXP_DELIMITER . preg_quote($subject, self::REG_EXP_DELIMITER) . self::REG_EXP_DELIMITER . 'u';
-    }
-
-    public static function escape($subject)
-    {
-        if (is_array($subject)) {
-            foreach ($subject as &$item) {
-                $item = self::escapeSingleItem($item);
-            }
-        } else {
-            $subject = self::escapeSingleItem($subject);
-        }
-
-        return $subject;
+        return self::REG_EXP_DELIMITER . preg_quote($input, self::REG_EXP_DELIMITER) . self::REG_EXP_DELIMITER . 'u';
     }
 }

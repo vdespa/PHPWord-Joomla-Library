@@ -10,13 +10,14 @@
  * file that was distributed with this source code. For the full list of
  * contributors, visit https://github.com/PHPOffice/PHPWord/contributors.
  *
- * @link        https://github.com/PHPOffice/PHPWord
- * @copyright   2010-2015 PHPWord contributors
+ * @see         https://github.com/PHPOffice/PHPWord
+ * @copyright   2010-2018 PHPWord contributors
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
 namespace PhpOffice\PhpWord\Writer\HTML\Element;
 
+use Laminas\Escaper\Escaper;
 use PhpOffice\PhpWord\Element\AbstractElement as Element;
 use PhpOffice\PhpWord\Writer\AbstractWriter;
 
@@ -49,6 +50,11 @@ abstract class AbstractElement
     protected $withoutP = false;
 
     /**
+     * @var \Laminas\Escaper\Escaper|\PhpOffice\PhpWord\Escaper\AbstractEscaper
+     */
+    protected $escaper;
+
+    /**
      * Write element
      */
     abstract public function write();
@@ -65,13 +71,13 @@ abstract class AbstractElement
         $this->parentWriter = $parentWriter;
         $this->element = $element;
         $this->withoutP = $withoutP;
+        $this->escaper = new Escaper();
     }
 
     /**
      * Set without paragraph.
      *
      * @param bool $value
-     * @return void
      */
     public function setWithoutP($value)
     {
