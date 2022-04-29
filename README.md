@@ -8,7 +8,7 @@ If you already know PHPWord, than this is a library package to be used in Joomla
 Version
 -------
 
-* The current Joomla! Library is using PHPWord 0.13.0 (master) EXPERIMENTAL
+* The current Joomla! Library is using PHPWord 0.14.0 (master) EXPERIMENTAL
 
 Download
 -------

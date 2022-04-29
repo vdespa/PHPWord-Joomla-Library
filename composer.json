@@ -3,7 +3,7 @@
     "description": "PHPWord Joomla! Library",
     "type": "library",
     "require": {
-        "phpoffice/phpword": "dev-develop"
+        "phpoffice/phpword": "^0.18"
     },
     "license": "LGPL version 3",
     "config": {
